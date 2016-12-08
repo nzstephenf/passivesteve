@@ -1,0 +1,160 @@
+@import 'util/util';
+@import 'settings';
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700';
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+}
+
+// logo
+.top-bar{
+    .top-bar-title{
+        .menu-icon{
+            left: 3px;
+        }
+        
+        .header-logo{
+            max-width: 200px;
+            float: left;
+            
+            img{
+                width: 100%;
+                float: left;
+            }
+        }
+    }
+    
+        
+    .top-bar-left{
+        .dropdown{
+            li{
+                a{
+                    color: #fff;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+                
+                &.is-dropdown-submenu-parent{
+                    & > a{
+                        &:after, &::after{
+                            border-color: #fff transparent transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// dropdown
+.dropdown{
+    li{
+        ul{
+            li{
+                a{
+                    &:hover{
+                        background: rgba(255,255,255, 0.4);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// content blocks
+.content-block{
+    padding: 35px 0;
+    
+    .column, .columns{
+        margin-bottom: 15px;
+    }
+    
+    &.content-block-grid{
+        
+        .content-block-grid-info-panel{
+            width: 40%;
+            float: left;
+        }
+        
+        .content-block-grid-grid-panel{
+            width: 60%;
+            float: right;
+            
+            .friend-card{
+                .friend-card-image{}
+                .friend-card-text{
+                    color: #000;
+                }
+            }
+        }
+    }
+    
+    &.content-block-left{
+        h2, p{
+            width: 100%;
+            float: left;
+        }
+    }
+    
+    &.content-block-right{
+        
+        h2{
+            width: 40%;
+            float: left;
+        }
+        
+        p{
+            width: 60%;
+            float: right;
+        }
+    }
+    
+}
+
+@media only screen and(max-width: map-get($breakpoints, medium)){
+    .top-bar{
+        .top-bar-title{
+            .header-logo{
+                max-width: 150px;
+                position: absolute;
+                top: 7px;
+                left: 40px;
+            }
+        }
+    }
+    
+    
+.content-block{
+    &.content-block-grid{
+        
+        .content-block-grid-info-panel, .content-block-grid-grid-panel{
+            width: 100%;
+            float: left;
+        }
+        
+        .friend-card-image{
+            margin-bottom: 10px;
+        }
+        
+        .friend-card-text{
+            display: none;
+        }
+    }
+    
+    &.content-block-left{
+        h2, p{
+            width: 100%;
+            float: left;
+        }
+    }
+    
+    &.content-block-right{
+        
+        h2, p{
+            width: 100%;
+            float: left;
+        }
+    }
+    
+}
+}

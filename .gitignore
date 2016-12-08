@@ -1,0 +1,10 @@
+.DS_Store
+.bowerrc
+etc
+pages
+scss
+templates
+gulpfile.js
+npm-debug.log
+package.json
+*.scss

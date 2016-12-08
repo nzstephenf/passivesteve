@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <base href="http://passivesteve.com/">
+<!--base href="/app/"-->
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta id="meta-site-fb-title" property="og:title" />
+<meta id="meta-site-fb-sitename" property="og:site_name" content="Passive Steve" />
+<meta id="meta-site-fb-appid" property="fb:app_id" content="554299404766138" />
+<meta id="meta-site-fb-url" property="og:url" />
+<meta id="meta-site-fb-description" property="og:description" />
+<meta id="meta-site-fb-image" property="og:image" />
+
+<meta id="meta-site-twitter-title" name="twitter:title" />
+<meta id="meta-site-twitter-card" name="twitter:card" content="summary" />
+<meta id="meta-site-twitter-sitename" name="twitter:site" content="Passive Steve" />
+<meta id="meta-site-twitter-image" name="twitter:image" />
+<meta id="meta-site-twitter-description" property="twitter:description" />
+        <title>Passive Steve</title>
+        <link rel="stylesheet" href="css/app.css">
+    </head>
+    <body>
+
+<div class="top-bar">
+    <div class="top-bar-title">
+        <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
+            <button class="menu-icon" type="button" data-toggle></button>
+        </span>
+            
+        <a href="index.html" class="header-logo">
+            <img src="images/passive-steve-logo.png">
+        </a>
+    </div>
+           
+    <div id="responsive-menu">
+        <div class="top-bar-left">
+            <ul class="dropdown menu" data-dropdown-menu>
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="shows/">Shows</a></li>
+                <li><a href="watch/">Watch</a></li>
+                <li><a href="about/">About</a></li>
+            </ul>
+        </div>
+        
+        <div class="top-bar-right">
+            <ul class="menu">
+                <li><a href="https://www.facebook.com/PassiveSteve" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/stephenfalepau" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://www.youtube.com/PassiveSteve" target="_blank"><i class="fa fa-youtube"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="content-block">
+    <div class="row">
+        <div class="columns small-12 medium-5">
+            <h2>Passive Steve Live</h2>
+            <h5>Random event</h5>
+            <p>
+                Passive Steve Live is a live broadcast that you can view at <a href="https://www.youtube.com/passivesteve">youtube.com/passivesteve</a>. Be sure to subscribe and have notifications turned on so you know when I stream live.
+                <br><br>
+                <script src="https://apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCihNOy2Sf56if4e_X9Ll_VQ" data-layout="full" data-count="default"></div>
+                <br><br>
+                The live streams tend to be one of the shows currently airing on the channel but in a live format.
+                <br><br>
+                <strong>Note: The stream may contain language that may offend/captions are not available</strong>
+            </p>
+            
+        </div>
+        
+        <div class="columns small-12 medium-7">
+            <h4>Watch the recent Passive Steve Live Stream</h4>
+            <div class="flex-video widescreen">
+                <iframe id="passive-steve-live-player" width="420" height="315" allowfullscreen style="border:0"></iframe>
+                
+                
+                <script>
+                    function onGoogleLoad() {
+                        gapi.client.setApiKey('AIzaSyBhyhx_i554u2eGE_lkzGBPC64ililxZiE');
+                        
+                        gapi.client.load('youtube', 'v3', function() {
+
+                            var request = gapi.client.youtube.playlistItems.list({
+                                part: 'snippet',
+                                playlistId: 'PL2EpqkmCqXGDtxFlM4MAVYzhQYXfKsykN',
+                                maxResults: 1
+                            });
+
+                            request.execute(function(response) {
+                                for (var i = 0; i < response.items.length; i++) {
+                                    var vidId = response.items[i].snippet.resourceId.videoId;
+
+                                    $('#passive-steve-live-player').attr('src', 'https://www.youtube.com/embed/' + vidId);
+                                }
+                            });
+                        });
+                    }
+                </script>
+
+                <script src="https://apis.google.com/js/client.js?onload=onGoogleLoad"></script>
+            </div>
+            
+        </div>
+    
+    </div>
+</div>
+
+<script id="meta-data" type="application/json">
+    {
+        "title": "Passive Steve LIVE",
+        "url": "http://passivesteve.com/shows/passive-steve-live.html",
+        "description": " Passive Steve LIVE is a live broadcast that you can view at youtube.com/passivesteve.",
+        "image": "http://passivesteve.com/images/shows/passive-steve-live.png"
+    }
+</script>
+
+
+        <script src="js/jquery.js"></script>
+        <script src="js/foundation.js"></script>
+        <script src="js/app.js"></script>
+        
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-88675038-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+  </body>
+</html>
