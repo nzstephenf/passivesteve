@@ -49,13 +49,21 @@ h1, h2, h3, h4, h5, h6 {
 // dropdown
 .dropdown{
     li{
-        ul{
-            li{
-                a{
-                    &:hover{
-                        background: rgba(255,255,255, 0.4);
-                    }
+        &.active{
+            a{
+                background: #4d4d4d;
+                
+                &:hover{
+                    background: rgba(77,77,77,0.5);
                 }
+            }
+        }
+        
+        a{
+            color: #fff;
+
+            &:hover{
+                background: rgba(255,255,255, 0.4);
             }
         }
     }
