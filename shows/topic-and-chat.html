@@ -82,33 +82,9 @@
         <div class="columns small-12 medium-7">
             <h4>Watch the latest Topic and Chat</h4>
             <div class="flex-video widescreen">
-                <iframe id="topic-and-chat-player" width="420" height="315" allowfullscreen style="border:0"></iframe>
                 
-                
-                <script>
-                    function onGoogleLoad() {
-                        gapi.client.setApiKey('AIzaSyBhyhx_i554u2eGE_lkzGBPC64ililxZiE');
-                        
-                        gapi.client.load('youtube', 'v3', function() {
+                <iframe src="//www.youtube.com/embed?controls=1&showinfo=1&list=PL2EpqkmCqXGB0Of1g8od4maPHxMcb1eD2&listType=playlist&rel=0" width="420" height="315" allowfullscreen style="border:0"></iframe>
 
-                            var request = gapi.client.youtube.playlistItems.list({
-                                part: 'snippet',
-                                playlistId: 'PL2EpqkmCqXGB0Of1g8od4maPHxMcb1eD2',
-                                maxResults: 1
-                            });
-
-                            request.execute(function(response) {
-                                for (var i = 0; i < response.items.length; i++) {
-                                    var vidId = response.items[i].snippet.resourceId.videoId;
-
-                                    $('#topic-and-chat-player').attr('src', 'https://www.youtube.com/embed/' + vidId);
-                                }
-                            });
-                        });
-                    }
-                </script>
-
-                <script src="https://apis.google.com/js/client.js?onload=onGoogleLoad"></script>
             </div>
             
         </div>
